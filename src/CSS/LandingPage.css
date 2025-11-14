@@ -1,0 +1,49 @@
+
+.greeting-section{
+    text-align: center;
+    margin-top: 8rem;
+}
+.title{
+    font-family:'Inter-ExtraBold' ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    color: var(--base-color);
+    font-size: 1.5rem;
+}
+
+#title-name{
+    color: var(--primary-color);
+}
+
+.title-body{
+    margin-top: 20px;
+    max-width: 30rem;
+    margin-left: 15.5rem;
+}
+#role{
+    font-family: 'Inter-Bold';
+    color: var(--base-color);
+    text-align: start;
+}
+.title-body p{
+    font-family: 'Inter-Regular';
+    color: var(--secondary-text-color);
+    margin-top: 5px;
+    text-align: start;
+    font-size: 15px;
+}
+
+@media (max-width: 768px) { 
+    .title{
+    font-size: 20px;
+    }
+
+    .title-body{
+    margin-top: 20px;
+    max-width: 25rem;
+    margin-left: 5rem;
+    }
+}
+

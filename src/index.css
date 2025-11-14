@@ -1,0 +1,44 @@
+:root {
+  --primary-color: #57C4E5;
+  --secondary-color: #2667FF;
+  --secondary-text-color: #939393;
+  --background-color: #212738;
+  --base-color: white;
+}
+@font-face{
+  font-family: 'Inter-Regular';
+  src: url(./fonts/Inter_28pt-Regular.ttf) format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Inter-Bold';
+  src: url(./fonts/Inter_28pt-Bold.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Inter-ExtraBold';
+  src: url(./fonts/Inter_28pt-ExtraBold.ttf) format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+@font-face{
+  font-family: 'Inter-SemiBold';
+  src: url(./fonts/Inter_28pt-SemiBold.ttf) format('ttf');
+  font-weight: bold;
+  font-style: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+    background-color: var(--background-color);
+}
