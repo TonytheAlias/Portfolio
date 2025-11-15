@@ -76,6 +76,74 @@
 .down-arrow{
     margin-top: 50px;
 }
+#section{
+    margin-left: 30px;
+    margin-right: 30px;
+}
+.about-section{
+    margin-top: 15rem;
+}
+.section-title{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-bottom: 5px;
+}
+.section-title h2{
+    font-family: 'Inter-bold';
+    font-size: 2rem;
+    color: var(--base-color);
+}
+.box{
+    background-color: var(--secondary-color);
+    height: 45px;
+    width: 5px;
+    border-radius: 25px;
+}
+.about-section p{
+    font-family: 'Inter-Regular';
+    font-size: 25px;
+    padding: 5px 40px;
+    color: var(--base-color);
+    height: auto;
+    width: 70rem;
+}
+.about-section p b{
+    color: var(--primary-color);
+}
+.education-section{
+    margin-top: 10rem;
+}
+.education-history{
+  padding: 5px 40px;
+}
+.college{
+    font-family: 'Inter-Bold';
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.college h3{
+    color: var(--base-color);
+    font-size: 20px;
+}
+#date{
+    display: flex;
+    gap: 5px;
+}
+#highlights{
+    color: var(--primary-color);
+}
+#degree{
+    display: flex;
+    align-items: center;
+}
+.college h4{
+    font-size: 15px;
+    color: var(--secondary-text-color);
+    padding: 5px 5px;
+}
+
 @media (max-width: 768px) { 
     .title{
     font-size: 20px;

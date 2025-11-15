@@ -55,6 +55,55 @@ function LandingPage() {
           </a>
         </div>
       </div>
+      <div className="about-section" id="section">
+        <div className="section-title">
+          <div className="box"></div>
+          <h2>About Me</h2>
+        </div>
+        <p>
+          Hey, I'm a recent Computer Science graduate from the University of
+          Southern Mississippi with hands-on experience building{" "}
+          <b>full-stack applications </b> and <b>responsive websites</b>. I work
+          primarily with <b>HTML</b>, <b>CSS</b>,<b>JavaScript</b>, <b>React</b>
+          , and <b>Python</b>, and I've led projects from concept to
+          deployment—including a <b>finance management app</b> and a{" "}
+          <b>ML-powered browser extension</b>. I'm passionate about creating
+          innovative, user-centered solutions that solve real problems. I'd love
+          to discuss opportunities where I can contribute to impactful projects.
+        </p>
+      </div>
+      <div className="education-section" id="section">
+        <div className="section-title">
+          <div className="box"></div>
+          <h2>Education</h2>
+        </div>
+        <div className="education-history">
+          <div className="college">
+            <div className="college-name">
+              <h3>University of Southern Mississippi</h3>
+              <h4 id="degree">
+                <h4 id="highlights">Bachelor's Degree</h4> of Computer Science
+              </h4>
+            </div>
+            <h3 id="date">
+              August <h3 id="highlights">2022</h3>- May{" "}
+              <h3 id="highlights">2025</h3>
+            </h3>
+          </div>
+          <div className="college">
+            <div className="college-name">
+              <h3>Hinds Community College</h3>
+              <h4 id="degree">
+                <h4 id="highlights">Associoate's Degree</h4> of General Studies
+              </h4>
+            </div>
+            <h3 id="date">
+              August <h3 id="highlights">2022</h3>- May{" "}
+              <h3 id="highlights"> 2021</h3>
+            </h3>
+          </div>
+        </div>
+      </div>
     </div>
   );
 }
