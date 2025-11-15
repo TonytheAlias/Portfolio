@@ -1,4 +1,10 @@
 import "../CSS/LandingPage.css";
+import {
+  RiGithubFill,
+  RiLinkedinBoxFill,
+  RiFile3Fill,
+  RiArrowDownWideFill,
+} from "@remixicon/react";
 function LandingPage() {
   return (
     <div className="body">
@@ -14,7 +20,40 @@ function LandingPage() {
             web.
           </p>
         </div>
-        <div className="contact-icons"></div>
+        <div className="contact-icons">
+          <a
+            href="https://github.com/TonytheAlias"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="GitHub"
+            aria-label="GitHub"
+          >
+            <RiGithubFill size={32} />
+          </a>
+          <a
+            href="https://linkedin.com/in/Tyreek-Brasfield"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Linkedin"
+            aria-label="Linkedin"
+          >
+            <RiLinkedinBoxFill size={32} />
+          </a>
+          <a
+            href="/CareerResume.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Resume"
+            aria-label="Resume"
+          >
+            <RiFile3Fill size={32} />
+          </a>
+        </div>
+        <div className="down-arrow">
+          <a href="" target="_blank" rel="noopener noreferrer">
+            <RiArrowDownWideFill size={32} />
+          </a>
+        </div>
       </div>
     </div>
   );
