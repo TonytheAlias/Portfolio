@@ -1,0 +1,20 @@
+.skill-card{
+    display: flex;
+    flex-direction: column;
+    margin: 30px 30px;
+}
+.skill-card h4{
+    font-family: 'Inter-SemiBold';
+    font-size: 20px;
+    color: var(--base-color);
+}
+
+.skill-items{
+    font-family: 'Inter-Regular';
+    font-size: 16px;
+    color: var(--secondary-text-color);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 5px 10px;
+}
