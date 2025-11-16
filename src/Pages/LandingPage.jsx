@@ -1,4 +1,6 @@
 import "../CSS/LandingPage.css";
+import ProjectCard from "../components/ProjectCard";
+import ProjectData from "../data/ProjectData.js";
 import {
   RiGithubFill,
   RiLinkedinBoxFill,
@@ -102,6 +104,25 @@ function LandingPage() {
               <h3 id="highlights"> 2021</h3>
             </h3>
           </div>
+        </div>
+      </div>
+      <div className="project-section" id="section">
+        <div className="section-title">
+          <div className="box"></div>
+          <h2>Featured Projects</h2>
+        </div>
+        <div className="project-grid">
+          {ProjectData.map((project) => (
+            <ProjectCard
+              key={project.id}
+              title={project.title}
+              description={project.description}
+              technologies={project.technologies}
+              image={project.image}
+              icon={project.icon}
+              githubLink={project.githubLink}
+            />
+          ))}
         </div>
       </div>
     </div>
