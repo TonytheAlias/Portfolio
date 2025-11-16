@@ -1,5 +1,5 @@
 .skill-card{
-    display: flex;
+     display: flex;
     flex-direction: column;
     margin: 30px 30px;
 }

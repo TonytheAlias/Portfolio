@@ -1,6 +1,8 @@
 import "../CSS/LandingPage.css";
 import ProjectCard from "../components/ProjectCard";
 import ProjectData from "../data/ProjectData.js";
+import SkillCard from "../components/SkillCard.jsx";
+import SkillData from "../data/SkillData.js";
 import {
   RiGithubFill,
   RiLinkedinBoxFill,
@@ -122,6 +124,17 @@ function LandingPage() {
               icon={project.icon}
               githubLink={project.githubLink}
             />
+          ))}
+        </div>
+      </div>
+      <div className="skill-section" id="section">
+        <div className="section-title">
+          <div className="box"></div>
+          <h2>Skills</h2>
+        </div>
+        <div className="skill-grid">
+          {SkillData.map((skill) => (
+            <SkillCard key={skill.id} title={skill.title} items={skill.items} />
           ))}
         </div>
       </div>
