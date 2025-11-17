@@ -147,6 +147,19 @@
     display: flex;
     justify-content: space-evenly;
 }
+.footer-section{
+    margin: 5rem auto 20px; 
+    text-align: center;
+    width: 50%;
+}
+#footer-description{
+    font-size: 20px;
+    font-family: "Inter-Regular";
+    color: var(--secondary-text-color);
+}
+#footer-description span{
+    color: var(--primary-color);
+}
 @media (max-width: 768px) { 
     .title{
     font-size: 20px;

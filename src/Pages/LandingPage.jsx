@@ -138,6 +138,15 @@ function LandingPage() {
           ))}
         </div>
       </div>
+      <div className="footer-section">
+        <p id="footer-description">
+          Website was loosely designed in <span>Figma</span> and coded in{" "}
+          <span>VS Code </span>
+          by me. Built with <span>React</span> and <span>Node.js</span>,
+          Deployed with <span>GitHub Pages</span>. Thanks for checking out my
+          portfolio.
+        </p>
+      </div>
     </div>
   );
 }
