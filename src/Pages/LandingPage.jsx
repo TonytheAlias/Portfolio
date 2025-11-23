@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "../CSS/LandingPage.css";
 import ProjectCard from "../components/ProjectCard";
 import ProjectData from "../data/ProjectData.js";
@@ -9,7 +10,66 @@ import {
   RiFile3Fill,
   RiArrowDownWideFill,
 } from "@remixicon/react";
+
 function LandingPage() {
+  useEffect(() => {
+    //Allow fade in/out animation through observer
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: "0px 0px -50px 0px",
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("visible");
+        } else {
+          entry.target.classList.remove("visible"); // Remove when out of view
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll(".section").forEach((section) => {
+      observer.observe(section);
+    });
+    //Allow header links to Scroll to Section
+    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+      anchor.addEventListener("click", function (e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute("href"));
+        if (target) {
+          const headerHeight = 70;
+          const targetPosition = target.offsetTop - headerHeight;
+
+          window.scrollTo({
+            top: targetPosition,
+            behavior: "smooth",
+          });
+        }
+      });
+    });
+
+    //Allows down arrow to scroll down page
+    const arrow = document.querySelector(".down-arrow a");
+
+    const handleClick = (e) => {
+      e.preventDefault();
+      window.scrollBy({
+        top: 500,
+        behavior: "smooth",
+      });
+    };
+
+    if (arrow) {
+      arrow.addEventListener("click", handleClick);
+    }
+
+    return () => {
+      if (arrow) {
+        arrow.removeEventListener("click", handleClick);
+      }
+    };
+  }, []);
   return (
     <div className="body">
       <div className="greeting-section">
@@ -59,7 +119,7 @@ function LandingPage() {
           </a>
         </div>
       </div>
-      <div className="about-section" id="section">
+      <div className="about-section section" id="about-me">
         <div className="section-title">
           <div className="box"></div>
           <h2>About Me</h2>
@@ -76,7 +136,7 @@ function LandingPage() {
           to discuss opportunities where I can contribute to impactful projects.
         </p>
       </div>
-      <div className="education-section" id="section">
+      <div className="education-section section" id="education">
         <div className="section-title">
           <div className="box"></div>
           <h2>Education</h2>
@@ -108,7 +168,7 @@ function LandingPage() {
           </div>
         </div>
       </div>
-      <div className="project-section" id="section">
+      <div className="project-section section" id="project">
         <div className="section-title">
           <div className="box"></div>
           <h2>Featured Projects</h2>
@@ -127,7 +187,7 @@ function LandingPage() {
           ))}
         </div>
       </div>
-      <div className="skill-section" id="section">
+      <div className="skill-section section" id="skills">
         <div className="section-title">
           <div className="box"></div>
           <h2>Skills</h2>
@@ -142,8 +202,8 @@ function LandingPage() {
         <p id="footer-description">
           Website was loosely designed in <span>Figma</span> and coded in{" "}
           <span>VS Code </span>
-          by me. Built with <span>React</span> and <span>Node.js</span>,
-          Deployed with <span>GitHub Pages</span>. Thanks for checking out my
+          by me. Built with <span>React.js</span> and <span>Node.js</span>,
+          deployed with <span>GitHub Pages</span>. Thanks for checking out my
           portfolio.
         </p>
       </div>

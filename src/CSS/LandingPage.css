@@ -2,6 +2,7 @@
 .greeting-section{
     text-align: center;
     margin-top: 8rem;
+    padding-top: 60px;
 }
 .title{
     font-family:'Inter-ExtraBold' ;
@@ -73,12 +74,33 @@
 .contact-icons a:hover::after {
     opacity: 1;
 }
+@keyframes bounce{
+     0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  } 
+}
 .down-arrow{
     margin-top: 50px;
 }
-#section{
+.down-arrow a{
+    animation: bounce 1s ease-in-out infinite;
+    display: inline-block;
+}
+
+.section{
     margin-left: 30px;
     margin-right: 30px;
+    margin-top: 13rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.section.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 .about-section{
     margin-top: 15rem;
@@ -111,9 +133,9 @@
 .about-section p b{
     color: var(--primary-color);
 }
-.education-section{
+/* .education-section{
     margin-top: 10rem;
-}
+} */
 .education-history{
   padding: 5px 40px;
 }

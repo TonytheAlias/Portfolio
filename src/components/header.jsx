@@ -9,13 +9,16 @@ function header() {
       <div className="right">
         <ul>
           <li>
-            <a href="">About Me</a>
+            <a href="#about-me">About Me</a>
           </li>
           <li>
-            <a href="">Education</a>
+            <a href="#education">Education</a>
           </li>
           <li>
-            <a href="">Project</a>
+            <a href="#project">Project</a>
+          </li>
+          <li>
+            <a href="#skills">Skills</a>
           </li>
         </ul>
       </div>
